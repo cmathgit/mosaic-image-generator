@@ -1,6 +1,9 @@
+# Ignore all secrets
 .env
 venv
 *.json
+
+# Ignore all common audio formats
 *.mp4
 *.mp3
 *.wav
@@ -10,6 +13,8 @@ venv
 *.mov
 *.flac
 *.flp
+
+# Ignore all common image formats
 *.png
 *.jpg
 *.jpeg
@@ -17,6 +22,8 @@ venv
 *.tiff
 *.ico
 *.gif
+
+# Ignore all common file formats
 .cursorignore
 *.zip
 *.txt
@@ -26,3 +33,13 @@ venv
 *.jsonl
 *.jsonl.gz
 *.jsonl.bz2
+
+# Do NOT ignore specific images required for documentation and demo
+!README.md
+!tiles_input/source_image_example.png
+!base_image_example.png
+!photo_mosaic_20250402_174307_tile50x50_res1p0.jpg
+!photo_mosaic_20250402_174238_tile50x50_res3p0.jpg
+!photo_mosaic_20250402_174214_tile50x50_res5p0.jpg
+!photo_mosaic_20250402_174149_tile50x50_res10p0.jpg
+!mosaic_results/photo_mosaic_cycled_20250402_133331_tile50x50_res7p0.jpg

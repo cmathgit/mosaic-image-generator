@@ -1,7 +1,32 @@
 # mosaic-image-generator
+
 This README provides instructions for using a set of Python scripts to generate photo mosaics, detailing how to prepare input tiles, adjust their colors, configure parameters like the base image and tile density via `user_config.ini`, and run the scripts to create the final mosaic image.
 
+## LLM Code Generation Notice
+
+Portions of this codebase were generated or refined using large language models (LLMs) including models such as Gemini, ChatGPT, Claude, DeepSeek, Qwen, Dolphin-Llama, and more, integrated API Plugins Such as Cline, Continue, Roo Code, and more, and Service Providers such as OpenRouter, Ollama, HuggingFace, Cursor, and GitHub Copilot and more. Final code was reviewed and adapted by the project maintainer. Use at your own risk.
+
+# Limitation of Liability Statement
+
+For a complete Limitation of Liability Statement, please visit my [website](https://cruzgmacias-cv.w3spaces.com/).
+
+
 # Photo Mosaic Generator
+
+This project generates mosaics using source tiles matched against a base image. Demonstration below:
+
+![Sample Mosaic Result GRID_RESOLUTION_FACTOR = 7.0](mosaic_results/photo_mosaic_cycled_20250402_133331_tile50x50_res7p0.jpg)
+
+![Sample Tile Source](tiles_input/source_image_example.png)
+
+The tile source can include stylistic elements. For example:
+
+![Base Image](base_image_example.png)
+
+![Sample Mosaic GRID_RESOLUTION_FACTOR = 1.0](mosaic_results/photo_mosaic_20250402_174307_tile50x50_res1p0.jpg)
+![Sample Mosaic GRID_RESOLUTION_FACTOR = 3.0](mosaic_results/photo_mosaic_20250402_174238_tile50x50_res3p0.jpg)
+![Sample Mosaic GRID_RESOLUTION_FACTOR = 5.0](mosaic_results/photo_mosaic_20250402_174214_tile50x50_res5p0.jpg)
+![Sample Mosaic GRID_RESOLUTION_FACTOR = 10.0](mosaic_results/photo_mosaic_20250402_174149_tile50x50_res10p0.jpg)
 
 This project provides a set of Python scripts to generate photo mosaics. It involves two main stages: preparing a library of color-adjusted tile images from an input set, and then using that library to construct a mosaic resembling a target base image.
 
