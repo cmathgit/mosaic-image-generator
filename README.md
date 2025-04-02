@@ -15,17 +15,32 @@ For a complete Limitation of Liability Statement, please visit my [website](http
 
 This project generates mosaics using source tiles matched against a base image. Demonstration below:
 
-![Sample Mosaic Result GRID_RESOLUTION_FACTOR = 7.0](mosaic_results/photo_mosaic_cycled_20250402_133331_tile50x50_res7p0.jpg)
+Sample Mosaic Result with a GRID_RESOLUTION_FACTOR = 7.0
 
-![Sample Tile Source](tiles_input/source_image_example.png)
+![Sample Mosaic Result GRID_RESOLUTION_FACTOR = 7.0](mosaic_results/photo_mosaic_cycled_20250402_133331_tile50x50_res7p0.jpg)
 
 The tile source can include stylistic elements. For example:
 
+![Sample Tile Source](tiles_input/source_image_example.png)
+
+Sample Base Image
+
 ![Base Image](base_image_example.png)
 
+Sample Mosaic Results with different GRID_RESOLUTION_FACTOR values:
+
+GRID_RESOLUTION_FACTOR = 1.0
+
 ![Sample Mosaic GRID_RESOLUTION_FACTOR = 1.0](mosaic_results/photo_mosaic_20250402_174307_tile50x50_res1p0.jpg)
+
+GRID_RESOLUTION_FACTOR = 3.0
 ![Sample Mosaic GRID_RESOLUTION_FACTOR = 3.0](mosaic_results/photo_mosaic_20250402_174238_tile50x50_res3p0.jpg)
+
+GRID_RESOLUTION_FACTOR = 5.0
+
 ![Sample Mosaic GRID_RESOLUTION_FACTOR = 5.0](mosaic_results/photo_mosaic_20250402_174214_tile50x50_res5p0.jpg)
+
+GRID_RESOLUTION_FACTOR = 10.0
 ![Sample Mosaic GRID_RESOLUTION_FACTOR = 10.0](mosaic_results/photo_mosaic_20250402_174149_tile50x50_res10p0.jpg)
 
 This project provides a set of Python scripts to generate photo mosaics. It involves two main stages: preparing a library of color-adjusted tile images from an input set, and then using that library to construct a mosaic resembling a target base image.
