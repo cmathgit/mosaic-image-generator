@@ -65,12 +65,12 @@ A virtual environment creates an isolated sandbox for your Python project, ensur
 2.  **Activate the Virtual Environment:**
     *   **Windows (Command Prompt/PowerShell):**
         ```cmd
-        venv\Scripts\activate
+        env\Scripts\activate.bat
         ```
         (If using Git Bash or similar on Windows, the source command might be needed: `source venv/Scripts/activate`)
     *   **macOS/Linux (Bash/Zsh):**
         ```bash
-        source venv/bin/activate
+        source env/bin/activate
         ```
     Your terminal prompt should change to indicate the active environment (e.g., `(venv) C:\path\to\project>`).
 
