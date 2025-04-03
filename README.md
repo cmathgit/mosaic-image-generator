@@ -49,11 +49,78 @@ This project provides a set of Python scripts to generate photo mosaics. It invo
 
 ## Prerequisites
 
-Ensure you have Python 3 installed. The following libraries are required and can be installed via pip:
+Ensure you have Python 3 installed. Using a virtual environment is strongly recommended to manage project dependencies and avoid conflicts with system-wide packages.
 
-```bash
-pip install Pillow numpy scipy
-```
+### Python Virtual Environment Setup (Recommended)
+
+A virtual environment creates an isolated sandbox for your Python project, ensuring that dependencies installed for this project do not interfere with other projects or your global Python installation.
+
+1.  **Create the Virtual Environment:**
+    Open your terminal or command prompt, navigate to the project's root directory, and run:
+    ```bash
+    python -m venv venv
+    ```
+    (You can replace `venv` with your preferred environment name, e.g., `env`). This creates a `venv/` subdirectory containing a copy of Python and `pip`.
+
+2.  **Activate the Virtual Environment:**
+    *   **Windows (Command Prompt/PowerShell):**
+        ```cmd
+        venv\Scripts\activate
+        ```
+        (If using Git Bash or similar on Windows, the source command might be needed: `source venv/Scripts/activate`)
+    *   **macOS/Linux (Bash/Zsh):**
+        ```bash
+        source venv/bin/activate
+        ```
+    Your terminal prompt should change to indicate the active environment (e.g., `(venv) C:\path\to\project>`).
+
+3.  **Verify Activation (Optional):**
+    You can confirm Python commands now run from the virtual environment's path:
+    *   **Windows:**
+        ```cmd
+        where python
+        ```
+    *   **macOS/Linux:**
+        ```bash
+        which python
+        ```
+    The output should point to the Python executable inside your `venv` directory.
+
+### Installing Dependencies
+
+Once your virtual environment is activated, you can install the required libraries.
+
+*   **Using `requirements.txt` (Recommended):**
+    This project includes a `requirements.txt` file listing the necessary dependencies. Install them all with:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    The required libraries are:
+    *   `Pillow`: For image loading, manipulation, and saving.
+    *   `numpy`: For efficient numerical operations, especially on image data arrays.
+    *   `scipy`: Used for its `KDTree` implementation, enabling fast nearest-neighbor searches for color matching.
+
+*   **Manual Installation & Generating `requirements.txt` (If starting fresh):**
+    If `requirements.txt` did not exist, you would install packages individually:
+    ```bash
+    pip install Pillow numpy scipy
+    ```
+    After installing, you can generate the `requirements.txt` file to lock down the dependencies and their versions for reproducibility:
+    ```bash
+    pip freeze > requirements.txt
+    ```
+
+4.  **Deactivating the Environment:**
+    When you are finished working on the project, simply run:
+    ```bash
+    deactivate
+    ```
+
+### Why Use a Virtual Environment?
+
+*   **Isolation:** Prevents dependency conflicts between projects. Project A can use version 1.0 of a library while Project B uses version 2.0 without issue.
+*   **Reproducibility:** `requirements.txt` ensures that anyone setting up the project uses the same dependency versions, leading to more consistent behavior.
+*   **Cleanliness:** Keeps your global Python installation tidy and free from project-specific packages.
 
 ## Directory Structure
 

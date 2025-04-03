@@ -1,6 +1,7 @@
 # Ignore all secrets
 .env
 venv
+env
 *.json
 
 # Ignore all common audio formats
@@ -43,3 +44,4 @@ venv
 !photo_mosaic_20250402_174214_tile50x50_res5p0.jpg
 !photo_mosaic_20250402_174149_tile50x50_res10p0.jpg
 !mosaic_results/photo_mosaic_cycled_20250402_133331_tile50x50_res7p0.jpg
+!requirements.txt
